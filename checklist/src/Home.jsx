@@ -50,13 +50,13 @@ const Home = () =>  {
                 {/* <button onClick={handleAdd}>addData</button> */}
                 <button onClick={onCheck}>Check List</button>
                 {isChecked && (<>
-                <h1>{userData.isValuationFeePaid == true ? "Check List Passed" :"Check List Failed" }</h1>
+                <h1>{userData.isValuationFeePaid == true ? "Valuation Fee Paid: Check List Passed" :" Valuation Fee Paid: Check List Failed" }</h1>
                 <br/>
-                <h1>{userData.isUkResident == true ?"Check List Passed" :"Check List Failed"}</h1>
+                <h1>{userData.isUkResident == true ?"UK Resident: Check List Passed" :" UK Resident: Check List Failed"}</h1>
                 <br/>
-                <h1>{userData.riskRating}</h1>
+                <h1>Risk Rating: {userData.riskRating == "Medium" ? "Check List Passed":"Check List Failed"}</h1>
                 <br/>
-                <h1>{userData.ltv}</h1>
+                <h1>LTV is {userData.ltv}</h1>
                 <br/>
                 {testPassed ? <p>All Conditions Passed</p>:<p>Not All Conditions Passed</p>}
                 </>)}
